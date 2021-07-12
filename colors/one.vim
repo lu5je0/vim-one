@@ -3,11 +3,13 @@
 " License: MIT
 " Version: 1.1.1-pre
 
-let g:one_init_flag = get(g:, 'one_init_flag', 0)
-if g:one_init_flag == 1
-    finish
+if has("nvim")
+    let g:one_init_flag = get(g:, 'one_init_flag', 0)
+    if g:one_init_flag == 1
+        finish
+    endif
+    let g:one_init_flag = 1
 endif
-let g:one_init_flag = 1
 " Global setup =============================================================={{{
 
 if exists("*<SID>X")
